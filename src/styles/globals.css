@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  /* BUG? Does not autocomplete the utility class when using the --font-* namespace */
+  /* it only autocompletes when using the --font-family-* namespace */
+  --font-family-sans: var(--font-sans);
+  --font-family-serif: var(--font-serif);
+}
+
+/* Inter variable font support*/
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+    /* variants -> https://rsms.me/inter/lab/?antialias=default */
+    font-feature-settings: "cv02", "cv03", "cv04", "cv09", "cv11";
+  }
+}
