@@ -1,9 +1,22 @@
+import BgCircle from "@/components/ui/bg-circle";
+import Hero from "./_components/sections/hero";
+import Menu from "./_components/sections/menu";
+import { Container, Section } from "@/components/ui/wrappers";
+
 export default function Home() {
   return (
-    <main>
-      <section className="h-screen inset-ring-4 inset-ring-green-500"></section>
-      <section className="h-screen inset-ring-4 inset-ring-blue-500"></section>
-      <section className="h-screen inset-ring-4 inset-ring-red-500"></section>
+    <main className="relative isolate overflow-clip">
+      <BgCircle className="-translate-x-[42%] -translate-y-[60%]" />
+      <BgCircle className="-translate-x-[38%] -translate-y-[65%]" />
+      <BgCircle className="-translate-x-[32%] -translate-y-[55%]" />
+
+      <Hero />
+
+      <Menu />
+
+      <Container>
+        <Section className="h-screen inset-ring-4 inset-ring-red-500"></Section>
+      </Container>
     </main>
   );
 }
