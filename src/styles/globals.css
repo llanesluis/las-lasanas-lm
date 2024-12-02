@@ -5,6 +5,23 @@
   /* it only autocompletes when using the --font-family-* namespace */
   --font-family-sans: var(--font-sans);
   --font-family-serif: var(--font-serif);
+
+  --color-background: oklch(97% 0 0);
+  --color-foreground: oklch(4% 0 0);
+
+  --color-accent: oklch(45.33% 0.1523 25.71); /* convertido desde #992525 */
+  --color-accent-foreground: oklch(97% 0.01 0);
+  --color-primary: oklch(23.08% 0 0); /* convertido desde #1d1d1d */
+  --color-primary-foreground: oklch(97% 0.01 0);
+  --color-muted: oklch(80% 0.01 0);
+  --color-muted-foreground: oklch(45.1% 0.01 0);
+  --color-destructive: oklch(60.2% 0.21 27.3);
+  --color-destructive-foreground: oklch(98% 0 0);
+
+  --color-card: oklch(93% 0 0);
+  --color-border: oklch(89.8% 0.01 0);
+  --color-input: oklch(89.8% 0.01 0);
+  --color-ring: oklch(50.6% 0.19 37.3);
 }
 
 /* Inter variable font support*/
@@ -14,4 +31,48 @@
     /* variants -> https://rsms.me/inter/lab/?antialias=default */
     font-feature-settings: "cv02", "cv03", "cv04", "cv09", "cv11";
   }
+}
+
+@utility bg-pattern-footer {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.975)
+    ),
+    url("/images/lasagna-pattern.webp");
+
+  background-repeat: repeat;
+  background-size: 250px;
+  background-position: top left;
+}
+
+@utility bg-scroll-header {
+  background-color: var(--color-background);
+  animation: header-background-color linear both;
+  animation-timeline: scroll(root);
+  animation-range: entry 0px exit 4rem;
+}
+
+@utility grid-fluid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-inline: auto;
+}
+
+@keyframes header-background-color {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: var(--color-background);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+strong {
+  font-weight: normal;
+  color: var(--color-accent);
+}
+
+p {
+  max-width: 70ch;
 }

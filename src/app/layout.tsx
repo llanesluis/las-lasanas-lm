@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "../styles/globals.css";
+import Footer from "./_components/footer";
+import Header from "./_components/header";
+import { cn } from "@/lib/utils";
+import { ScreenDevTools } from "@/components/devtools/screen-devtools";
 
 const fontSans = localFont({
   src: "../fonts/inter/InterVariable.woff2",
@@ -45,8 +49,17 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${fontSans.variable} ${fontSans.className} ${fontSerif.variable} antialiased`}>
-        {children}
+        className={cn(
+          `${fontSans.variable} ${fontSans.className} ${fontSerif.variable} isolate grid antialiased`,
+          "bg-background text-foreground",
+          "flex min-h-screen flex-col",
+        )}
+      >
+        <Header />
+        <div className="isolate grow">{children}</div>
+        <Footer />
+
+        <ScreenDevTools />
       </body>
     </html>
   );
