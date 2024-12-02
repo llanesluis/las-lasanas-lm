@@ -1,6 +1,6 @@
 import BgCircle from "@/components/ui/bg-circle";
-import Hero from "./_components/sections/hero";
-import Menu from "./_components/sections/menu";
+import Hero from "./_sections/hero";
+import Menu from "./_sections/menu";
 import { Container, Section } from "@/components/ui/wrappers";
 
 export default function Home() {
