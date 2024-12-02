@@ -202,7 +202,7 @@ function FloatingBgImages() {
         src={"/images/others/ramas-1.webp"}
         alt="rama-1"
         className={cn(
-          "absolute bottom-0 left-0 z-[-1] translate-y-[-10%] rotate-180 opacity-50",
+          "absolute bottom-[30%] left-0 z-[-1] translate-y-[-10%] rotate-180 opacity-50",
           "max-md:w-[250px]",
         )}
         height={220}

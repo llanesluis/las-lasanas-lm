@@ -10,11 +10,11 @@
   --color-foreground: oklch(4% 0 0);
 
   --color-accent: oklch(45.33% 0.1523 25.71); /* convertido desde #992525 */
-  --color-accent-foreground: oklch(97% 0.01 0);
+  --color-accent-foreground: oklch(97% 0 0);
   --color-primary: oklch(23.08% 0 0); /* convertido desde #1d1d1d */
-  --color-primary-foreground: oklch(97% 0.01 0);
-  --color-muted: oklch(80% 0.01 0);
-  --color-muted-foreground: oklch(45.1% 0.01 0);
+  --color-primary-foreground: oklch(97% 0 0);
+  --color-muted: oklch(80% 0 0);
+  --color-muted-foreground: oklch(45.1% 0 0);
   --color-destructive: oklch(60.2% 0.21 27.3);
   --color-destructive-foreground: oklch(98% 0 0);
 
@@ -30,6 +30,27 @@
     font-family: InterVariable, sans-serif;
     /* variants -> https://rsms.me/inter/lab/?antialias=default */
     font-feature-settings: "cv02", "cv03", "cv04", "cv09", "cv11";
+  }
+}
+
+@utility bg-pattern {
+  position: relative;
+
+  &::before {
+    pointer-events: none;
+
+    content: "";
+    position: absolute;
+    inset: 0;
+    heigt: 100%;
+    width: 100%;
+    z-index: -10; /* Para que quede detrás del contenido */
+
+    background-image: url("/images/lasagna-pattern.webp");
+    background-repeat: repeat;
+    background-size: 100px;
+    background-position: top left;
+    opacity: 0.1; /* Ajusta la opacidad */
   }
 }
 

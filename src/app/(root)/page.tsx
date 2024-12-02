@@ -1,7 +1,8 @@
 import BgCircle from "@/components/ui/bg-circle";
 import Hero from "./_sections/hero";
 import Menu from "./_sections/menu";
-import { Container, Section } from "@/components/ui/wrappers";
+import RappiBanner from "./_sections/rappi-banner";
+import NewsletterBanner from "./_sections/newsletter-banner";
 
 export default function Home() {
   return (
@@ -11,12 +12,9 @@ export default function Home() {
       <BgCircle className="-translate-x-[32%] -translate-y-[55%]" />
 
       <Hero />
-
       <Menu />
-
-      <Container>
-        <Section className="h-screen inset-ring-4 inset-ring-red-500"></Section>
-      </Container>
+      <RappiBanner />
+      <NewsletterBanner />
     </main>
   );
 }
