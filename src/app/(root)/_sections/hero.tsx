@@ -8,7 +8,7 @@ import WhatsApp from "@/components/icons/whatsapp";
 export default function Hero() {
   return (
     <Container>
-      <Section className="relative grid h-screen gap-8 pt-20 md:grid-cols-2 md:pt-24">
+      <Section className="relative grid h-screen gap-8 pt-20 md:grid-cols-2 md:gap-12 md:pt-24 lg:gap-20">
         <div className="flex max-w-[500px] flex-col gap-4 md:gap-8">
           <Image
             src={"/images/logos/logo_black.webp"}
@@ -22,12 +22,12 @@ export default function Hero() {
               Lasañas y Ensaladas
             </p>
             <H1 className="font-normal">
-              ¡Perfectas para satisfacer tu antojo rápido y con{" "}
-              <strong>sabor casero</strong>!
+              ¡Perfectas para satisfacer tu antojo rápido y con
+              <strong> sabor casero</strong>!
             </H1>
           </div>
 
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground max-lg:w-[min(100%,320px)] max-md:w-full">
             Lorem ipsum dolor sit amet elit. Vero minus a illum neque. Ea
             asperiores, tenetur aut explicabo laboriosam! Deserunt, tenetur.
           </p>
@@ -44,7 +44,7 @@ export default function Hero() {
           <FloatingBgImages />
 
           <div className="relative size-full max-md:hidden">
-            <div className="size-full overflow-clip rounded-[15%_2%_15%_2%] drop-shadow">
+            <div className="size-full overflow-clip rounded-[96px_16px_96px_16px] drop-shadow">
               <Image
                 src={"/images/others/hero-lasana.webp"}
                 className="object-cover"
@@ -53,7 +53,7 @@ export default function Hero() {
               />
             </div>
 
-            <div className="size absolute bottom-[5%] aspect-square h-64 translate-x-[-50%] drop-shadow-lg">
+            <div className="size absolute bottom-[5%] aspect-square h-52 translate-x-[-50%] drop-shadow-lg transition-all lg:h-64">
               <Image
                 src={"/images/others/hero-ensalada.webp"}
                 className="object-contain"

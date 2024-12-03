@@ -5,8 +5,8 @@ import Image from "next/image";
 export default function NewsletterBanner() {
   return (
     <Section className="bg-background relative md:py-24">
-      <Container className="z-1 h-[50vh] max-sm:h-[80vh]">
-        <div className="relative isolate size-full overflow-clip rounded-[96px_18px_96px_18px]">
+      <Container className="z-1">
+        <div className="relative isolate size-full h-[50vh] overflow-clip rounded-[96px_18px_96px_18px] max-sm:h-[80vh]">
           <Image
             src={"/images/others/newsletter.webp"}
             alt="newsletter banner"
@@ -30,6 +30,10 @@ export default function NewsletterBanner() {
             <Button className="bg-accent max-w-[80%]">Suscribirme</Button>
           </form>
         </div>
+        <p className="text-muted-foreground/80 max-w-none px-4 pt-2 text-xs italic sm:text-sm">
+          * Al proporcionar tu correo autorizas recibir correos con promociones
+          y nuevos lanzamientos.
+        </p>
       </Container>
     </Section>
   );

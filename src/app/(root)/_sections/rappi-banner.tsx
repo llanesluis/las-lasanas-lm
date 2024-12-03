@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function RappiBanner() {
   return (
-    <Section className="bg-primary relative isolate overflow-clip p-16 md:py-24">
+    <Section className="bg-primary relative isolate overflow-clip py-16 md:py-24">
       <BgCircle className="right-0 bottom-0 translate-x-[35%] translate-y-[35%]" />
       <BgCircle className="right-0 bottom-0 translate-x-[60%] translate-y-[40%]" />
       <BgCircle className="right-0 bottom-0 translate-x-[40%] translate-y-[60%]" />
@@ -29,12 +29,12 @@ export default function RappiBanner() {
         height={340}
       />
 
-      <Container className="flex size-full flex-col items-center gap-10">
-        <span className="text-muted absolute inset-x-0 top-[6%] mx-auto w-fit font-semibold uppercase md:top-[12%] md:text-lg">
+      <Container className="flex size-full flex-col items-center gap-6">
+        <p className="text-muted mx-auto w-fit font-semibold uppercase md:text-lg">
           Encuentranos en
-        </span>
+        </p>
 
-        <div className="relative w-full max-w-[500px]">
+        <div className="relative w-full max-w-[565px]">
           <Image
             className="size-full object-contain"
             src={"/images/rappi/rappi-logo-efecto.webp"}
@@ -44,22 +44,26 @@ export default function RappiBanner() {
           />
         </div>
 
-        <div className="relative w-full">
-          <Image
-            className="mx-auto object-contain max-sm:hidden"
-            src={"/images/rappi/rappi-button-desktop-efecto.webp"}
-            alt="Rappi logo"
-            width={385}
-            height={105}
-          />
+        <div className="relative contents w-full">
+          <button className="mx-auto cursor-pointer max-sm:hidden">
+            <Image
+              className="object-contain"
+              src={"/images/rappi/rappi-button-desktop-efecto.webp"}
+              alt="Rappi logo"
+              width={385}
+              height={105}
+            />
+          </button>
 
-          <Image
-            className="mx-auto object-contain sm:hidden"
-            src={"/images/rappi/rappi-button-mobile-efecto.webp"}
-            alt="Rappi logo"
-            width={183}
-            height={127}
-          />
+          <button className="mx-auto cursor-pointer sm:hidden">
+            <Image
+              className="object-contain"
+              src={"/images/rappi/rappi-button-mobile-efecto.webp"}
+              alt="Rappi logo"
+              width={183}
+              height={127}
+            />
+          </button>
         </div>
       </Container>
     </Section>

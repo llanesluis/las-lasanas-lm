@@ -89,11 +89,13 @@
   }
 }
 
-strong {
-  font-weight: normal;
-  color: var(--color-accent);
-}
+@layer base {
+  strong {
+    font-weight: normal;
+    color: var(--color-accent);
+  }
 
-p {
-  max-width: 70ch;
+  p {
+    max-width: 70ch;
+  }
 }
