@@ -48,7 +48,7 @@
 
     background-image: url("/images/lasagna-pattern.webp");
     background-repeat: repeat;
-    background-size: 100px;
+    background-size: 200px;
     background-position: top left;
     opacity: 0.1; /* Ajusta la opacidad */
   }
@@ -76,6 +76,11 @@
 
 @utility grid-fluid {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-inline: auto;
+}
+
+@utility grid-fill {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   margin-inline: auto;
 }
 
