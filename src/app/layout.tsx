@@ -7,13 +7,13 @@ import { cn } from "@/lib/utils";
 import { ScreenDevTools } from "@/components/devtools/screen-devtools";
 
 const fontSans = localFont({
-  src: "../app/fonts/inter/InterVariable.woff2",
+  src: "../../public/fonts/inter/InterVariable.woff2",
   variable: "--font-sans",
   weight: "100 900",
 });
 
 const fontSerif = localFont({
-  src: "../app/fonts/dm-serif-display/DMSerifDisplay.ttf",
+  src: "../../public/fonts/dm-serif-display/DMSerifDisplay.ttf",
   variable: "--font-serif",
 });
 
