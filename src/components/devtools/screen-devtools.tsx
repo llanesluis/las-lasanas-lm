@@ -51,13 +51,17 @@ export function ScreenDevTools() {
           "bg-card ring-muted rounded-full p-1 font-mono ring shadow",
         )}
       >
-        <ScreenSize />
+        <DynamicScreenSize />
       </div>
     </div>
   );
 }
 
 export const DynamicScreenDevTools = dynamic(async () => ScreenDevTools, {
+  ssr: false,
+});
+
+const DynamicScreenSize = dynamic(async () => ScreenSize, {
   ssr: false,
 });
 
