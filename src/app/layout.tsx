@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "../styles/globals.css";
 import Footer from "./_components/footer";
 import Header from "./_components/header";
 import { cn } from "@/lib/utils";
 import { ScreenDevTools } from "@/components/devtools/screen-devtools";
+import { DM_Serif_Display, Inter } from "next/font/google";
 
-const fontSans = localFont({
-  src: "../../public/fonts/inter/inter-variable.woff2",
+const fontSans = Inter({
+  subsets: ["latin"],
   variable: "--font-sans",
-  weight: "100 900",
 });
 
-const fontSerif = localFont({
-  src: "../../public/fonts/dm-serif-display/dm-serif-display.ttf",
+const fontSerif = DM_Serif_Display({
+  subsets: ["latin"],
   variable: "--font-serif",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
