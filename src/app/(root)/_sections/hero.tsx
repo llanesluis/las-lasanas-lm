@@ -4,6 +4,8 @@ import { Container, Section } from "@/components/ui/wrappers";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import WhatsApp from "@/components/icons/whatsapp";
+import ExternalLink from "@/components/ui/external-link";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -28,15 +30,20 @@ export default function Hero() {
           </div>
 
           <p className="text-muted-foreground max-lg:w-[min(100%,320px)] max-md:w-full">
-            Lorem ipsum dolor sit amet elit. Vero minus a illum neque. Ea
-            asperiores, tenetur aut explicabo laboriosam! Deserunt, tenetur.
+            Somos tu única opción de Lasañas y Ensaladas con sabor casero.
+            ¡Atrevete a disfrutar de nuestros deliciosos platillos!
           </p>
 
           <div className="flex gap-4">
-            <Button>Menú</Button>
-            <Button className="bg-accent flex items-center gap-2">
-              Cotiza para un evento <WhatsApp />
-            </Button>
+            <Link href="/menu">
+              <Button>Menú</Button>
+            </Link>
+
+            <ExternalLink href="https://api.whatsapp.com/send?phone=5216681500100&text=%C2%A1Hola%2C%20me%20interesa%20hacer%20un%20pedido%20de%20Lasa%C3%B1as!%20%3AD">
+              <Button className="bg-accent flex gap-2 max-md:ml-auto">
+                Haz tu pedido <WhatsApp />
+              </Button>
+            </ExternalLink>
           </div>
         </div>
 

@@ -11,14 +11,14 @@ export const FEATURED_MENU = [
     nombre: "Lasañita",
     precio: 70,
     description: "Porción individual sin acompañamientos.",
-    image: "/images/menu/lasagnas/lasañita.jpg",
+    image: "/images/menu/lasagnas/lasagnita.jpg",
   },
   {
     id: "2",
     name: "Lasaña para Compartir",
     price: 300,
     description: "Ideal para compartir entre tres personas.",
-    image: "/images/menu/salads/salad-1.jpg",
+    image: "/images/menu/lasagnas/charola.jpg",
   },
   {
     id: "11",

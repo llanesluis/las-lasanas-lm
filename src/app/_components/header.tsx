@@ -3,6 +3,8 @@ import { Container } from "@/components/ui/wrappers";
 import NavLink from "./nav-link";
 import Link from "next/link";
 import { Menu } from "lucide-react";
+import ExternalLink from "@/components/ui/external-link";
+import WhatsApp from "@/components/icons/whatsapp";
 
 export default function Header() {
   return (
@@ -31,14 +33,13 @@ export default function Header() {
             <li>
               <NavLink href="/blog">Blog</NavLink>
             </li>
-            <li>
-              <NavLink href="/fake">Fake</NavLink>
-            </li>
           </ul>
 
-          <Button className="bg-accent max-md:ml-auto">
-            Cotiza para eventos
-          </Button>
+          <ExternalLink href="https://api.whatsapp.com/send?phone=5216681500100&text=%C2%A1Hola%2C%20me%20interesa%20hacer%20un%20pedido%20de%20Lasa%C3%B1as!%20%3AD">
+            <Button className="bg-accent flex gap-1 max-md:ml-auto">
+              Ordena <WhatsApp />
+            </Button>
+          </ExternalLink>
 
           {/* TODO: MOBILE NAV */}
           <div className="md:hidden">
