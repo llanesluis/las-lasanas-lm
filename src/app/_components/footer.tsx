@@ -43,14 +43,14 @@ export default function Footer() {
                 </ExternalLink>
               </li>
               <li>
-                <ExternalLink href="https://www.facebook.com/p/Las-lasa%C3%B1as-LM-61556244630807/">
+                <ExternalLink href="https://www.instagram.com/laslasanaslm?igsh=OGo3Z2tkYmM4Z3Jh">
                   <span className="sr-only">Instagram</span>
                   <Instagram />
                 </ExternalLink>
               </li>
               <li>
                 {/* todo: whatsapp link */}
-                <ExternalLink href="#">
+                <ExternalLink href="https://api.whatsapp.com/send?phone=5216681500100&text=%C2%A1Hola%2C%20me%20interesa%20hacer%20un%20pedido%20de%20Lasa%C3%B1as!%20%3AD">
                   <span className="sr-only">WhatsApp</span>
                   <WhatsApp />
                 </ExternalLink>
